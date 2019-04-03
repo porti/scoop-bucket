@@ -1,0 +1,23 @@
+﻿{
+    "version":  "1.4.6",
+    "license":  "",
+    "extract_dir":  "",
+    "url":  "https://dl.bintray.com/cryptomator/cryptomator/1.4.6/Cryptomator-1.4.6-x64.exe",
+    "depends":  "",
+    "homepage":  "",
+    "hash":  "6cf3fcddee2923fd8f41d5b0c3766689eeb0d3d83310b28cb0aa38c92b70a97e",
+    "bin":  "cryptomator.exe",
+    "shortcuts": [
+        [
+            "cryptomator.exe",
+            "Cryptomator"
+        ]
+    ],	
+	"persist": "data",
+	"depends": "openjdk",
+	"post_install": [
+		"# change appdata settings fodler",
+		"(Get-Content \"$dir\\app\\Cryptomator.cfg\").replace('~/AppData/Roaming/Cryptomator', '../data').replace('\\', '/') | Set-Content \"$dir\\app\\Cryptomator.cfg\""
+	],
+	"innosetup": "true"
+}
