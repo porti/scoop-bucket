@@ -14,7 +14,6 @@
         ]
     ],	
 	"persist": "data",
-	"depends": "openjdk",
 	"post_install": [
 		"# change appdata settings fodler",
 		"(Get-Content \"$dir\\app\\Cryptomator.cfg\").replace('~/AppData/Roaming/Cryptomator', '../data').replace('\\', '/') | Set-Content \"$dir\\app\\Cryptomator.cfg\""
