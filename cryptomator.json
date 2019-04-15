@@ -4,7 +4,7 @@
     "url":  "https://dl.bintray.com/cryptomator/cryptomator/1.4.7/Cryptomator-1.4.7-x64.exe",
     "homepage":  "https://cryptomator.org/",
 	"description": "Cryptomator. Free client-side encryption for your cloud files",
-    "hash":  "6cf3fcddee2923fd8f41d5b0c3766689eeb0d3d83310b28cb0aa38c92b70a97e",
+    "hash":  "fcd9d61568bde91607e68bdb48918fa2a4986dd5961df7a345a5bb69814ce7bb",
     "bin":  "cryptomator.exe",
     "shortcuts": [
         [
