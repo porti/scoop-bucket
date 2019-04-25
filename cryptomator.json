@@ -1,10 +1,10 @@
 ﻿{
-    "version":  "1.4.7",
+    "version":  "1.4.8",
     "license":  "GPL-3.0-only",
-    "url":  "https://dl.bintray.com/cryptomator/cryptomator/1.4.7/Cryptomator-1.4.7-x64.exe",
+    "url":  "https://github.com/cryptomator/cryptomator/releases/download/1.4.8/Cryptomator-1.4.8-x64.exe",
     "homepage":  "https://cryptomator.org/",
 	"description": "Cryptomator. Free client-side encryption for your cloud files",
-    "hash":  "fcd9d61568bde91607e68bdb48918fa2a4986dd5961df7a345a5bb69814ce7bb",
+    "hash":  "f2cb60c8eb035ea3b34a6ddced8366dd53e235e21fff01599e7affb4cf2b01c6",
     "bin":  "cryptomator.exe",
     "shortcuts": [
         [
