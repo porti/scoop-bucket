@@ -1,10 +1,10 @@
 ﻿{
-    "version":  "1.4.8",
+    "version":  "1.4.98",
     "license":  "GPL-3.0-only",
-    "url":  "https://github.com/cryptomator/cryptomator/releases/download/1.4.8/Cryptomator-1.4.8-x64.exe",
+    "url":  "https://github.com/cryptomator/cryptomator/releases/download/1.4.9/Cryptomator-1.4.9-x64.exe",
     "homepage":  "https://cryptomator.org/",
 	"description": "Cryptomator. Free client-side encryption for your cloud files",
-    "hash":  "f2cb60c8eb035ea3b34a6ddced8366dd53e235e21fff01599e7affb4cf2b01c6",
+    "hash":  "5f6520a7f05ca00a086d81b57e8fd56045d8632e1905e6e46427fdaaaeedf3fb",
     "bin":  "cryptomator.exe",
     "shortcuts": [
         [
@@ -14,7 +14,7 @@
     ],	
 	"persist": "data",
 	"post_install": [
-		"# change appdata settings fodler",
+		"# change appdata settings folder",
 		"(Get-Content \"$dir\\app\\Cryptomator.cfg\").replace('~/AppData/Roaming/Cryptomator', '../data').replace('\\', '/') | Set-Content \"$dir\\app\\Cryptomator.cfg\""
 	],
 	"innosetup": "true"
