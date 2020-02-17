@@ -4,7 +4,7 @@
     "license": "GPL-2.0-only",
     "version": "1.3.9",
     "url": "https://www.dagmarco.ch/files/scoop/binaries/KeeOtp-PoM.plgx",
-    "hash": "d9928175c9b3c6a6ed1a4f50760f8fa00dd7704c5352b0d18251aac2ab564018",
+    "hash": "42e7f83a30553efeb8933748cfe3d15ca3a2e736220dc7296ec0f9d2f300f6a1",
     "depends": "extras/keepass",
     "installer": {
         "script": "Copy-Item \"$dir\\KeeOtp-PoM.plgx\" \"$(appdir keepass $global)\\current\\Plugins\""
