@@ -1,26 +1,28 @@
-﻿{
-	"version": "2.5.16",
-	"license": "GPL-2.0-only",
-	"url": "https://thomasokken.com/free42/download/Free42Windows.zip",
-	"homepage": "https://thomasokken.com/free42/",
-	"description": "Free42 : An HP-42S Calculator Simulator",
-	"hash": "009e8e58eab59089220a3db2a16d3cc8745026c7dc472849ad16f1f4c66e27a5",
-	"extract_dir": "Free42Windows",
-	"pre_install": [
-		"(New-Item -Force -Type File \"$dir\\portable\") | Out-Null"
-	],
-	"bin": [
-		"Free42Binary.exe",
-		"Free42Decimal.exe"
-	],
-	"shortcuts": [
-		[
-			"Free42Binary.exe",
-			"Free42Binary"
-		],
-		[
-			"Free42Decimal.exe",
-			"Free42Decimal"
-		]
-	]
+{
+    "version": "2.5.17",
+    "license": "GPL-2.0-only",
+    "url": "https://thomasokken.com/free42/download/Free42Windows.zip",
+    "homepage": "https://thomasokken.com/free42/",
+    "description": "Free42 : An HP-42S Calculator Simulator",
+    "hash": "3135083022d9ec8cf83f044fc0a198536e4117f69de3e04cf6d825f02a44ff48",
+    "extract_dir": "Free42Windows",
+    "checkver": "<b>(?<version>[\\d.]+)</b>",
+    "autoupdate": {
+        "url": "https://thomasokken.com/free42/download/Free42Windows.zip"
+    },
+    "pre_install": "(New-Item -Force -Type File \"$dir\\portable\") | Out-Null",
+    "bin": [
+        "Free42Binary.exe",
+        "Free42Decimal.exe"
+    ],
+    "shortcuts": [
+        [
+            "Free42Binary.exe",
+            "Free42Binary"
+        ],
+        [
+            "Free42Decimal.exe",
+            "Free42Decimal"
+        ]
+    ]
 }
