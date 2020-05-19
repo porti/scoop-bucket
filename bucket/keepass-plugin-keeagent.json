@@ -17,6 +17,6 @@
         "script": "Copy-Item \"$dir\\KeeAgent.plgx\" \"$(appdir keepass $global)\\current\\Plugins\""
     },
     "uninstaller": {
-        "script": "Remove-Item \"$(appdir keepass $global)\\current\\Plugins\\KeeAgent.zip\""
+        "script": "Remove-Item \"$(appdir keepass $global)\\current\\Plugins\\KeeAgent.plgx\""
     }
 }
