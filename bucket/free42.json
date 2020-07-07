@@ -1,10 +1,10 @@
 {
-    "version": "2.5.18",
+    "version": "2.5.19",
     "license": "GPL-2.0-only",
     "url": "https://thomasokken.com/free42/download/Free42Windows.zip",
     "homepage": "https://thomasokken.com/free42/",
     "description": "Free42 : An HP-42S Calculator Simulator",
-    "hash": "26f09274e0a1819dfc57dc81250e588c2ae0c23a298fe0670805022e6efcabdf",
+    "hash": "17b2568181db7b6ba524b529dd249dbadea1e83adf5ded533203604c60134f9b",
     "extract_dir": "Free42Windows",
     "checkver": "<b>(?<version>[\\d.]+)</b>",
     "autoupdate": {
