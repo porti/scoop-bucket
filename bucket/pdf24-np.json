@@ -9,12 +9,13 @@
         "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", 'DESKTOPICONS=No', '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the installation.' } | Out-Null"
     },
     "uninstaller": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the uninstallation.' } | Out-Null"
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"{261E2A07-C4A7-4123-8C71-5CD494C6E491}\", '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the uninstallation.' } | Out-Null"
     },
     "checkver": {
         "url": "https://tools.pdf24.org/de/creator",
         "regex": ">Version ([\\d.]+)</span>"
     },
+    "post_install": "if ((Test-Path \"$dir\\setup.msi_\")) { Remove-Item \"$dir\\setup.msi_\" -Force | Out-Null }",
     "autoupdate": {
         "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-$version.msi#/setup.msi_"
     }
