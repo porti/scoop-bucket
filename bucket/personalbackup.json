@@ -1,5 +1,5 @@
 {
-    "version": "6.1.1301",
+    "version": "6.1.1400",
     "description": "simple backup solution",
     "homepage": "https://personal-backup.rathlev-home.de/",
     "license": {
@@ -7,13 +7,13 @@
         "url": "https://personal-backup.rathlev-home.de/license.html"
     },
     "architecture": {
-	    "32bit": {
-			"url": "https://personal-backup.rathlev-home.de/download/pb-setup-6.1.1301.exe",
-			"hash": "570f074331cca0a3a3ed39fd94f2722dc4dcf0073a1cdf4b039d60f4bc26b583"
-		},
+        "32bit": {
+            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-6.1.1400.exe",
+            "hash": "ed1727c4d09c140303ab149a09ccbe58a933a17cc1eff836385f631a1b0d270a"
+        },
         "64bit": {
-			"url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-6.1.1301.exe",
-            "hash": "07e597ab67abc23cbe6a69e869459c80504e002fa655ed008749ca833bff7ada"
+            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-6.1.1400.exe",
+            "hash": "e0e6ecc8eeaf825ae3915bfdf9c85421cc73965df36b209961ff93ae8c47205e"
         }
     },
     "innosetup": true,
@@ -23,26 +23,26 @@
         [
             "Persbackup.exe",
             "Personal Backup",
-			"/ini:%progpath%\\pb.ini /taskdir:%progpath%\\tasks /logdir:%progpath%\\logs"
+            "/ini:%progpath%\\pb.ini /taskdir:%progpath%\\tasks /logdir:%progpath%\\logs"
         ]
     ],
-	"persist": [
-		"pb.ini",
-		"logs",
-		"tasks"
-	],
+    "persist": [
+        "pb.ini",
+        "logs",
+        "tasks"
+    ],
     "checkver": {
         "url": "https://personal-backup.rathlev-home.de/download.html",
         "regex": "pb-setup-(?<version>[\\d.]+[\\d])"
     },
     "autoupdate": {
-	  "architecture": {
-	    "32bit": {
-			"url": "https://personal-backup.rathlev-home.de/download/pb-setup-$version.exe"
-		},
-	    "64bit": {
-			"url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-$version.exe"
-		}
-	  }
+        "architecture": {
+            "32bit": {
+                "url": "https://personal-backup.rathlev-home.de/download/pb-setup-$version.exe"
+            },
+            "64bit": {
+                "url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-$version.exe"
+            }
+        }
     }
 }
