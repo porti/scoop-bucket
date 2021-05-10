@@ -1,10 +1,10 @@
 {
-    "version": "2.47",
+    "version": "2.48",
     "description": "German Language for Keepass",
     "homepage": "https://keepass.info",
     "license": "GPL-2.0-or-later",
-    "url": "https://downloads.sourceforge.net/keepass/KeePass-2.47-German.zip",
-    "hash": "14b0bac3c9c43b5a5c53d558f1b98aa2b790ffab377ead5f3aa61ecf5fcc4985",
+    "url": "https://downloads.sourceforge.net/keepass/KeePass-2.48-German.zip",
+    "hash": "c7b52fc46ca56a351d5bd5633562ad4dcc3688056e0aef756067bd42c126cde9",
     "depends": "extras/keepass",
     "checkver": {
         "url": "https://keepass.info/translations.html",
