@@ -1,13 +1,13 @@
 {
-    "version": "4.3.7.25118",
+    "version": "4.4.0.25886",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
-    "url": "https://www.scootersoftware.com/BCompare-de-4.3.7.25118.exe",
-    "hash": "b7aefbd3940123146cb423a50ba8ac7d58026e38e1fab05ff11eda8a96e8ecb9",
+    "url": "https://www.scootersoftware.com/BCompare-de-4.4.0.25886.exe",
+    "hash": "2c5e0716fe45b7140ca4f7c14bde453673f06efa646197fef940c22534750f0e",
     "innosetup": true,
     "architecture": {
         "64bit": {
