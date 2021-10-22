@@ -1,5 +1,5 @@
 {
-    "version": "6.2.0500",
+    "version": "6.2.0600",
     "description": "simple backup solution",
     "homepage": "https://personal-backup.rathlev-home.de/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-6.2.0500.exe",
-            "hash": "0c8e4f8037c044325d2f9ea9d129dc45ff3b2edb04188fb7ce11bfba0d8f3660"
+            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-6.2.0600.exe",
+            "hash": "4d0bdf3f5cd5a3ff37d5205458881670f9e344a03b64f6d26e8c592a5fb0a323"
         },
         "64bit": {
-            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-6.2.0500.exe",
-            "hash": "dfdcba6b97e866259f3c1e0e5551fe7fdcd7535cb78128321678b33b157ad9a7"
+            "url": "https://personal-backup.rathlev-home.de/download/pb-setup-x64-6.2.0600.exe",
+            "hash": "153d7d3215ea037d8fd5676abed657420cf0cdabffad1854f8b43a8ed890008b"
         }
     },
     "innosetup": true,
