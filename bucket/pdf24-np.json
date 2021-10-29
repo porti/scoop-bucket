@@ -1,21 +1,20 @@
 {
-    "version": "10.6.2",
+    "version": "10.6.3",
     "description": "Free and user-friendly PDF creator with many functions.",
     "homepage": "https://tools.pdf24.org/",
     "license": "Freeware",
-    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-10.6.2.msi#/setup.msi_",
-    "hash": "382fa9c51b781f857393e9699903d95d6bec249e3cda2ace5b9416b67eb0a997",
+    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-10.6.3.msi#/setup.msi_",
+    "hash": "f6297b1a3feace89e49a8da4282914f10f0bc274b5a35a2eb289afa9f93a7cf7",
     "installer": {
         "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", 'DESKTOPICONS=No', '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the installation.' } | Out-Null"
     },
     "uninstaller": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"{D985C50D-6716-4F5D-9405-8ABF8055C1DE}\", '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the uninstallation.' } | Out-Null"
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the uninstallation.' } | Out-Null"
     },
     "checkver": {
         "url": "https://tools.pdf24.org/de/creator",
         "regex": "\"version\">([\\d.]+)</span>"
     },
-    "post_install": "if ((Test-Path \"$dir\\setup.msi_\")) { Remove-Item \"$dir\\setup.msi_\" -Force | Out-Null }",
     "autoupdate": {
         "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-$version.msi#/setup.msi_"
     }
