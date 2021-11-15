@@ -1,10 +1,10 @@
 {
-    "version": "1.1",
+    "version": "1.1.1",
     "description": "KeePassOTP allows you to generate one time passwords (OTP)",
     "homepage": "https://github.com/Rookiestyle/KeePassOTP",
     "license": "GPL-3.0 License",
-    "url": "https://github.com/Rookiestyle/KeePassOTP/releases/download/v1.1/KeePassOTP.plgx",
-    "hash": "07fc9a2c3ecc6ab2e630478d4c979973a6d2bd4696d27dbed34cb96030f50c26",
+    "url": "https://github.com/Rookiestyle/KeePassOTP/releases/download/v1.1.1/KeePassOTP.plgx",
+    "hash": "0186e3a5936dd702fc3b1b98b5a1048109b9ed2a2f97d8892e424f17f97150b9",
     "depends": "extras/keepass",
     "checkver": {
         "github": "https://github.com/Rookiestyle/KeePassOTP"
