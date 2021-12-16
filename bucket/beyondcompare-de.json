@@ -27,6 +27,34 @@
             }
         }
     },
+    "pre_install": [
+        "New-Item \"$dir\\BCState.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCSessions.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCCommands.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCPreferences.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCColors.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCFileFormats.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BCProfiles.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "New-Item \"$dir\\BC4Key.txt\" -ItemType file -ErrorAction SilentlyContinue | Out-Null"
+    ],
+    "persist": [
+        "Helpers",
+        "BCState.xml",
+        "BCSessions.xml",
+        "BCCommands.xml",
+        "BCPreferences.xml",
+        "BCColors.xml",
+        "BCFileFormats.xml",
+        "BCProfiles.xml",
+        "BC4Key.txt"
+     ],
+    "uninstaller": {
+        "script": [
+            "try {",
+            "Get-ChildItem \"$dir\\*\" -Include 'BCState.xml', 'BCSessions.xml', 'BCCommands.xml', 'BCPreferences.xml', 'BCColors.xml', 'BCFileFormats.xml', 'BCProfiles.xml'| Copy-Item -Destination \"$persist_dir\" -ErrorVariable capturedErrors -ErrorAction SilentlyContinue",
+            "} catch {}"
+        ]
+    },
     "bin": "Bcomp.exe",
     "shortcuts": [
         [
