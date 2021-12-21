@@ -1,15 +1,15 @@
 {
-    "version": "4.4.0.25886",
+    "version": "4.4.1.26165",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
-    "url": "https://www.scootersoftware.com/BCompare-de-4.4.0.25886.exe",
-    "hash": "2c5e0716fe45b7140ca4f7c14bde453673f06efa646197fef940c22534750f0e",
+    "url": "https://www.scootersoftware.com/BCompare-de-4.4.1.26165.exe",
+    "hash": "9d0744b36614651d83057d1574d7b1cc2af9763307e9116031421ff930840761",
     "innosetup": true,
-    "notes": "Run '$dir\\install-context.reg' to register BCompare for handle right-click context menu.",	
+    "notes": "Run '$dir\\install-context.reg' to register BCompare for handle right-click context menu.",
     "architecture": {
         "64bit": {
             "installer": {
@@ -37,13 +37,13 @@
         "New-Item \"$dir\\BCFileFormats.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
         "New-Item \"$dir\\BCProfiles.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
         "New-Item \"$dir\\BC4Key.txt\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-		"Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\install-context.reg\" -Destination \"$dir\\install-context.reg\"",
-		"Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\uninstall-context.reg\" -Destination \"$dir\\uninstall-context.reg\"",
+        "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\install-context.reg\" -Destination \"$dir\\install-context.reg\"",
+        "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\uninstall-context.reg\" -Destination \"$dir\\uninstall-context.reg\"",
         "$app_path = \"$dir\".Replace('\\', '\\\\')",
         "$reg_content = (Get-Content \"$dir\\install-context.reg\")",
         "$reg_content = $reg_content.replace('$app_path', $app_path)",
         "Set-Content \"$dir\\install-context.reg\" $reg_content -Encoding ASCII"
-	],
+    ],
     "persist": [
         "Helpers",
         "BCState.xml",
@@ -54,7 +54,7 @@
         "BCFileFormats.xml",
         "BCProfiles.xml",
         "BC4Key.txt"
-     ],
+    ],
     "uninstaller": {
         "script": [
             "try {",
