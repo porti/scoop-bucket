@@ -9,10 +9,13 @@
     "bin": "Windows Error Lookup Tool.exe",
     "pre_install": "if (!(Test-Path \"$persist_dir\\settings.ini\")) { New-Item \"$dir\\settings.ini\" -Force | Out-Null }",
     "persist": "settings.ini",
-	"shortcuts": [
-		[
-			"Windows Error Lookup Tool.exe",
-			"Windows Error Lookup Tool"
-		]
-    ]
+    "shortcuts": [
+        [
+            "Windows Error Lookup Tool.exe",
+            "Windows Error Lookup Tool"
+        ]
+    ],
+    "autoupdate": {
+        "url": "https://www.gunnerinc.com/files/welt.zip"
+    }
 }
