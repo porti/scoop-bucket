@@ -29,14 +29,14 @@
         }
     },
     "pre_install": [
-        "New-Item \"$dir\\BCState.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCSessions.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCCommands.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCPreferences.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCColors.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCFileFormats.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BCProfiles.xml\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
-        "New-Item \"$dir\\BC4Key.txt\" -ItemType file -ErrorAction SilentlyContinue | Out-Null",
+        "if (!(Test-Path \"$persist_dir\\BCState.xml\")) { New-Item \"$dir\\BCState.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCSessions.xml\")) { New-Item \"$dir\\BCSessions.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCCommands.xml\")) { New-Item \"$dir\\BCCommands.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCPreferences.xml\")) { New-Item \"$dir\\BCPreferences.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCColors.xml\")) { New-Item \"$dir\\BCColors.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCFileFormats.xml\")) { New-Item \"$dir\\BCFileFormats.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BCProfiles.xml\")) { New-Item \"$dir\\BCProfiles.xml\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\BC4Key.txt\")) { New-Item \"$dir\\BC4Key.txt\" -Force | Out-Null }",
         "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\install-context.reg\" -Destination \"$dir\\install-context.reg\"",
         "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\uninstall-context.reg\" -Destination \"$dir\\uninstall-context.reg\"",
         "$app_path = \"$dir\".Replace('\\', '\\\\')",
@@ -57,10 +57,9 @@
     ],
     "uninstaller": {
         "script": [
-            "try {",
-            "Get-ChildItem \"$dir\\*\" -Include 'BCState.xml', 'BCSessions.xml', 'BCCommands.xml', 'BCPreferences.xml', 'BCColors.xml', 'BCFileFormats.xml', 'BCProfiles.xml'| Copy-Item -Destination \"$persist_dir\" -ErrorVariable capturedErrors -ErrorAction SilentlyContinue",
-            "} catch {}"
-        ]
+			"Get-ChildItem \"$dir\\*\" -Include 'BCState.xml', 'BCSessions.xml', 'BCCommands.xml', 'BCPreferences.xml', 'BCColors.xml', 'BCFileFormats.xml', 'BCProfiles.xml' `",
+			"| Where-Object LinkType -eq $null | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+		]
     },
     "bin": "Bcomp.exe",
     "shortcuts": [
