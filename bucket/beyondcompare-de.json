@@ -39,7 +39,7 @@
         "if (!(Test-Path \"$persist_dir\\BC4Key.txt\")) { New-Item \"$dir\\BC4Key.txt\" -Force | Out-Null }"
     ],
 	"post_install": [
-        "$script_path = \"$bucketsdir\\\"+\"$bucket\\\"+\"$app\".Replace('beyondcompare-de', 'scripts\\beyondcompare-de')",
+        "$script_path = \"$bucketsdir\\$bucket\\scripts\\$app\"",
         "$dir_escaped = \"$dir\".Replace('\\', '\\\\')",
         "\"install-context-$architecture\", \"uninstall-context\" | ForEach-Object {",
         "  if (Test-Path \"$script_path\\$_.reg\") {",
