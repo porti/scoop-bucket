@@ -36,14 +36,23 @@
         "if (!(Test-Path \"$persist_dir\\BCColors.xml\")) { New-Item \"$dir\\BCColors.xml\" -Force | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\BCFileFormats.xml\")) { New-Item \"$dir\\BCFileFormats.xml\" -Force | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\BCProfiles.xml\")) { New-Item \"$dir\\BCProfiles.xml\" -Force | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\BC4Key.txt\")) { New-Item \"$dir\\BC4Key.txt\" -Force | Out-Null }",
-        "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\install-context.reg\" -Destination \"$dir\\install-context.reg\"",
-        "Copy-Item \"$bucketsdir\\porti\\scripts\\beyondcompare-de\\uninstall-context.reg\" -Destination \"$dir\\uninstall-context.reg\"",
-        "$app_path = \"$dir\".Replace('\\', '\\\\')",
-        "$reg_content = (Get-Content \"$dir\\install-context.reg\")",
-        "$reg_content = $reg_content.replace('$app_path', $app_path)",
-        "Set-Content \"$dir\\install-context.reg\" $reg_content -Encoding ASCII"
+        "if (!(Test-Path \"$persist_dir\\BC4Key.txt\")) { New-Item \"$dir\\BC4Key.txt\" -Force | Out-Null }"
     ],
+	"post_install": [
+        "$script_path = \"$bucketsdir\\\"+\"$bucket\\\"+\"$app\".Replace('beyondcompare-de', 'scripts\\beyondcompare-de')",
+        "$dir_escaped = \"$dir\".Replace('\\', '\\\\')",
+        "\"install-context-$architecture\", \"uninstall-context\" | ForEach-Object {",
+        "  if (Test-Path \"$script_path\\$_.reg\") {",
+        "    $content = Get-Content \"$script_path\\$_.reg\"",
+        "    $content = $content.Replace('$install_dir', $dir_escaped)",
+        "    if ($global) {",
+        "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    $outfile_no_arch = $_.Replace(\"-$architecture\", \"\")",
+        "    $content | Set-Content -Path \"$dir\\$outfile_no_arch.reg\"",
+        "  }",
+        "}"	
+	],
     "persist": [
         "Helpers",
         "BCState.xml",
