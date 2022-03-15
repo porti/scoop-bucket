@@ -17,17 +17,17 @@
         }
     },
     "innosetup": true,
-    "pre_install": "if (!(Test-Path \"$persist_dir\\pb.ini\")) { New-Item \"$dir\\pb.ini\" -Force | Out-Null }",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\PersBackup.ini\")) { New-Item \"$dir\\PersBackup.ini\" -Force | Out-Null }",
     "bin": "Persbackup.exe",
     "shortcuts": [
         [
             "Persbackup.exe",
             "Personal Backup",
-            "/ini:%progpath%\\pb.ini /taskdir:%progpath%\\tasks /logdir:%progpath%\\logs"
+            "/portable"
         ]
     ],
     "persist": [
-        "pb.ini",
+        "PersBackup.ini",
         "logs",
         "tasks"
     ],
