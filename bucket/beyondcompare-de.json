@@ -1,13 +1,13 @@
 {
-    "version": "4.4.1.26165",
+    "version": "4.4.2.26348",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
-    "url": "https://www.scootersoftware.com/BCompare-de-4.4.1.26165.exe",
-    "hash": "9d0744b36614651d83057d1574d7b1cc2af9763307e9116031421ff930840761",
+    "url": "https://www.scootersoftware.com/BCompare-de-4.4.2.26348.exe",
+    "hash": "ff2b46c2621511fdd7088d7fddc9079ab43417d92a3ea272237a762886422708",
     "innosetup": true,
     "notes": "Run '$dir\\install-context.reg' to register BCompare for handle right-click context menu.",
     "architecture": {
@@ -38,7 +38,7 @@
         "if (!(Test-Path \"$persist_dir\\BCProfiles.xml\")) { New-Item \"$dir\\BCProfiles.xml\" -Force | Out-Null }",
         "if (!(Test-Path \"$persist_dir\\BC4Key.txt\")) { New-Item \"$dir\\BC4Key.txt\" -Force | Out-Null }"
     ],
-	"post_install": [
+    "post_install": [
         "$script_path = \"$bucketsdir\\$bucket\\scripts\\$app\"",
         "$dir_escaped = \"$dir\".Replace('\\', '\\\\')",
         "\"install-context-$architecture\", \"uninstall-context\" | ForEach-Object {",
@@ -51,8 +51,8 @@
         "    $outfile_no_arch = $_.Replace(\"-$architecture\", \"\")",
         "    $content | Set-Content -Path \"$dir\\$outfile_no_arch.reg\"",
         "  }",
-        "}"	
-	],
+        "}"
+    ],
     "persist": [
         "Helpers",
         "BCState.xml",
@@ -66,9 +66,9 @@
     ],
     "uninstaller": {
         "script": [
-			"Get-ChildItem \"$dir\\*\" -Include 'BCState.xml', 'BCSessions.xml', 'BCCommands.xml', 'BCPreferences.xml', 'BCColors.xml', 'BCFileFormats.xml', 'BCProfiles.xml' `",
-			"| Where-Object LinkType -eq $null | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
-		]
+            "Get-ChildItem \"$dir\\*\" -Include 'BCState.xml', 'BCSessions.xml', 'BCCommands.xml', 'BCPreferences.xml', 'BCColors.xml', 'BCFileFormats.xml', 'BCProfiles.xml' `",
+            "| Where-Object LinkType -eq $null | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+        ]
     },
     "bin": "Bcomp.exe",
     "shortcuts": [
