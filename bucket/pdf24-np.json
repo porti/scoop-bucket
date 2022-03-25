@@ -1,10 +1,10 @@
 {
-    "version": "11.0.0",
+    "version": "11.0.1",
     "description": "Free and user-friendly PDF creator with many functions.",
     "homepage": "https://tools.pdf24.org/",
     "license": "Freeware",
-    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-11.0.0.msi#/setup.msi_",
-    "hash": "9e0aec96665122349fe590888a919151d121024320ab8991b557082bd5893c35",
+    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-11.0.1.msi#/setup.msi_",
+    "hash": "e1e7554d3a99285352134f94126fe001ca93cc2641520629e2a3a9675c26f08a",
     "installer": {
         "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", 'DESKTOPICONS=No', '/qn', '/norestart') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the installation.' } | Out-Null"
     },
