@@ -10,6 +10,11 @@
     "suggest": {
         "git": "main/git"
     },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\qtpass.ini\")) { New-Item \"$dir\\qtpass.ini\" -Force | Out-Null }",
+    "persist": "qtpass.ini",
+    "uninstaller": {
+        "script": "Get-ChildItem \"$dir\\*\" -Include 'qtpass.ini' | Where-Object LinkType -eq $null | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+    },
     "shortcuts": [
         [
             "qtpass.exe",
