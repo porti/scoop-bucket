@@ -1,13 +1,13 @@
 {
-    "version": "4.4.6.27483",
+    "version": "4.4.7.28397",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
-    "url": "https://www.scootersoftware.com/BCompare-de-4.4.6.27483.exe",
-    "hash": "dc8d5903fb5304c7c442864a01c4750dd58891e6dc385929dc274ebdefd1a1cc",
+    "url": "https://www.scootersoftware.com/BCompare-de-4.4.7.28397.exe",
+    "hash": "e3aba498539e9872231b3c3960074b9396d48f763104ce2485b40b5c855223a6",
     "innosetup": true,
     "notes": "Run '$dir\\install-context.reg' to register BCompare for handle right-click context menu.",
     "architecture": {
