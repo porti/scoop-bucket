@@ -1,13 +1,13 @@
 {
-    "version": "5.1.5.31310",
+    "version": "5.1.6.31527",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/kb/licensev5"
     },
-    "url": "https://www.scootersoftware.com/files/BCompare-de-5.1.5.31310.exe",
-    "hash": "526c14fb8ddafd292476bba2ab4859587d2859cf7da33c026bfe67f991c62186",
+    "url": "https://www.scootersoftware.com/files/BCompare-de-5.1.6.31527.exe",
+    "hash": "a27f6af87396a5d044234625a4770cda6963ea68f36ab18768f360266294baaa",
     "architecture": {
         "64bit": {
             "installer": {
