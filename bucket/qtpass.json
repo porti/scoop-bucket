@@ -1,9 +1,9 @@
 {
-    "version": "1.8.1",
+    "version": "1.8.3",
     "license": "GPL-3.0-only",
     "homepage": "https://qtpass.org/",
-    "url": "https://github.com/IJHack/QtPass/releases/download/v1.8.1/qtpass-1.8.1.exe",
-    "hash": "a7cb67f8232701ba6df0f21dfb4337be566a83f1f12848169d1debfbf9e60d4e",
+    "url": "https://github.com/IJHack/QtPass/releases/download/v1.8.3/qtpass-1.8.3.exe",
+    "hash": "1dce4876ba0f508501e9f6d69fd1519333e64fc62c97bafaa05c08f9e3869fbc",
     "innosetup": true,
     "bin": "qtpass.exe",
     "depends": "main/gpg",
