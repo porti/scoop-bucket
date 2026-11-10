@@ -1,10 +1,10 @@
 {
-    "version": "1.26.29",
+    "version": "1.26.31",
     "description": "VeraCrypt is a free open source disk encryption software for Windows, Mac OSX and Linux. Brought to you by IDRIX (https://www.idrix.fr) and based on TrueCrypt 7.1a.",
     "homepage": "https://veracrypt.fr/",
     "license": "Freeware",
-    "url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_Setup_x64_1.26.29.msi#/setup.msi_",
-    "hash": "5ba6426983123cfb92bc1f09bd888fdbc0f53f300d0d9c5da52ce3aee8d474f0",
+    "url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.31/VeraCrypt_Setup_x64_1.26.31.msi#/setup.msi_",
+    "hash": "6b0dbcc1d6910ec9f045689dd29172b4ae825b5fdcdae1a2d5f1e5b692782265",
     "installer": {
         "script": [
             "if (!(is_admin)) {",
